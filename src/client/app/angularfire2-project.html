@@ -1,5 +1,15 @@
-<p>
-  angularfire2-project Works!
-</p>
+<div *ngIf="auth | async">
+  Hello <i>{{username}}</i>,
+  <div>
+    <form-message></form-message>
+  </div>
+  <div>
+    <messages></messages>
+  </div>
+  
+  <button (click)='logout()'>Log out</button>
+</div>
 
-<router-outlet></router-outlet>
+<div *ngIf="!(auth | async)">
+  <button (click)='login()'>Log in</button>
+</div>

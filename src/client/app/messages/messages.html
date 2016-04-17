@@ -1,0 +1,5 @@
+<ul *ngFor="#message of messages | async">
+  <li>
+    <message [msg]="message"></message>
+  </li>
+</ul>

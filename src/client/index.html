@@ -34,11 +34,26 @@
 
   <script>
     System.config({
+      map: {
+        firebase: 'vendor/firebase/lib/firebase-web.js',
+        // rxjs: 'vendor/rxjs',
+        angularfire2: 'vendor/angularfire2'
+      },
       packages: {
         app: {
           format: 'register',
           defaultExtension: 'js'
+        },
+        angularfire2: {
+          defaultExtension: 'js',
+          main: 'angularfire2.js'
         }
+        // firebase: {
+        //   defaultExtension: 'js'
+        // },
+        // rxjs: {
+        //   defaultExtension: 'js'
+        // }
       }
     });
     System.import('app.js').then(null, console.error.bind(console));
