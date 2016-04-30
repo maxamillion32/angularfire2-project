@@ -5,19 +5,10 @@
   <title>Angularfire2Project</title>
   <base href="/">
   {{content-for 'head'}}
+   <!-- Bootstrap -->
+   <link rel="stylesheet" href="app/css/bootstrap/bootstrap.min.css">
+   <link rel="stylesheet" href="app/css/bootstrap/bootstrap-theme.min.css">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-  
-  <!-- Service worker support is disabled by default.
-       Install the worker script and uncomment to enable.
-       Only enable service workers in production.
-  <script type="text/javascript">
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/worker.js').catch(function(err) {
-        console.log('Error installing service worker: ', err);
-      });
-    }
-  </script>
-  -->
 </head>
 <body>
   <angularfire2-project-app>Loading...</angularfire2-project-app>
@@ -36,7 +27,6 @@
     System.config({
       map: {
         firebase: 'vendor/firebase/lib/firebase-web.js',
-        // rxjs: 'vendor/rxjs',
         angularfire2: 'vendor/angularfire2'
       },
       packages: {
@@ -48,12 +38,6 @@
           defaultExtension: 'js',
           main: 'angularfire2.js'
         }
-        // firebase: {
-        //   defaultExtension: 'js'
-        // },
-        // rxjs: {
-        //   defaultExtension: 'js'
-        // }
       }
     });
     System.import('app.js').then(null, console.error.bind(console));

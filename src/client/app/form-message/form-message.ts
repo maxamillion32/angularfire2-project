@@ -21,10 +21,13 @@ export class FormMessage {
   
   sendMessage() {
     this.af.database.list('/messages').push({
-      user: this.auth.getAuth().twitter.username, 
+      user: (this.auth.getAuth().twitter) ? this.auth.getAuth().twitter.username : this.auth.getAuth().facebook.displayName, 
+      profileImageURL: (this.auth.getAuth().twitter) ? this.auth.getAuth().twitter.profileImageURL : this.auth.getAuth().facebook.profileImageURL,
+      socialNetwork: this.auth.getAuth().provider,
       msg: this.messageControl.value,
       date: new Date()
     });
+    this.messageControl.updateValue('');
   }
 
 }

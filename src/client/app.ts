@@ -4,7 +4,7 @@ import {enableProdMode} from 'angular2/core';
 import {ROUTER_PROVIDERS} from 'angular2/router';
 import {FIREBASE_PROVIDERS, defaultFirebase, AngularFire, firebaseAuthConfig, AuthProviders, AuthMethods} from 'angularfire2';
 
-//enableProdMode();
+// enableProdMode();
 
 bootstrap(Angularfire2ProjectApp, [
   FIREBASE_PROVIDERS,
