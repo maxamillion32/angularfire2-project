@@ -11,10 +11,13 @@ import {Message} from './../message/message';
 })
 export class Messages {
 
-  messages: Observable<any[]>;
+  messages: Message[];
   
   constructor(af: AngularFire) {
-    this.messages = af.database.list('/messages');;
+    af.database.list('/messages').subscribe(messages => {
+      this.messages = messages;
+      this.messages.reverse();
+    });
   }
 
 }
