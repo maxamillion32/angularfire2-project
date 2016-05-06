@@ -4,10 +4,6 @@
     width: 70%;
 }
 
-img {
-    max-height: 58px;
-}
-
 .development {
   position: absolute;
   width: 149px;
@@ -20,4 +16,8 @@ img {
   background-position: center center;
   background-repeat: no-repeat;
   pointer-events: none; 
+}
+
+ul {
+    margin-bottom: 10px;
 }
